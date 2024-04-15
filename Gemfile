@@ -8,7 +8,6 @@ gem "rails", "~> 7.0.8", ">= 7.0.8.1"
 
 gem "react-rails"
 gem "rack-cors"
-gem "byebug"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -55,6 +54,11 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "byebug", platform: :mri
+  gem "rspec-rails", "~> 3.5"
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "database_cleaner"
 end
 
 group :development do
@@ -70,6 +74,5 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
   gem "selenium-webdriver"
 end
